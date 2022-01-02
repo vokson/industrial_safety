@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: ./src/frontend/Dockerfile
+    volumes:
+      - ./docker-settings/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./docker-settings/nginx.conf:/etc/nginx/nginx.conf:ro
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
