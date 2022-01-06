@@ -33,7 +33,7 @@
           />
           <datalist id="test_counts">
             <option value="1" label="1" />
-            <option value="20" label="20" />
+            <option v-if="total_count_of_questions > 20" value="20" label="20" />
             <option
               :value="total_count_of_questions"
               :label="total_count_of_questions"
@@ -73,7 +73,7 @@
           @update:json="handle_new_questions_drop($event)"
           :default="[]"
         >
-          <span class="page__dropzonetitle">Вопросы (json)</span>
+          <span class="page__dropzonetitle">Перетащи сюда вопросы (json)</span>
         </json-file-drop-zone>
       </div>
     </div>
@@ -273,6 +273,8 @@ export default {
 
 .page__dropzonetitle {
   font-size: 24px;
+  padding: 10px;
+  text-align:center;
 }
 
 .page__managecontainer {

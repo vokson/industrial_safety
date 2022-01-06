@@ -32,7 +32,7 @@ export default {
 
     const handleDrop = async (e) => {
       is_dragging.value = false;
-      e.dataTransfer.files.forEach(async (file) => {
+      Array.prototype.forEach.call(e.dataTransfer.files, async (file) => {
         try {
           const text = await file.text();
           const json = JSON.parse(text);
