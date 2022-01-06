@@ -31,7 +31,7 @@
               handle_count_of_questions_changed($event.target.valueAsNumber)
             "
           />
-          <datalist id="test_counts">
+          <datalist v-if="total_count_of_questions > 0" id="test_counts">
             <option value="1" label="1" />
             <option v-if="total_count_of_questions > 20" value="20" label="20" />
             <option
