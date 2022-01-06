@@ -2,7 +2,7 @@
   <div class="page">
     <heading
       class="page__heading"
-      text="Промышленная безопасность"
+      text="Самоподготовка к тестированию"
       size="middle"
     />
     <div class="page__container">
@@ -64,6 +64,7 @@
           />
         </div>
       </div>
+
       <div class="page__servicecontainer" v-if="!is_test_active">
         <json-file-drop-zone
           class="page__docdropzone"
@@ -257,7 +258,7 @@ export default {
 }
 
 .page__docdropzone {
-  height: 50px;
+  height: 200px;
   border: 2px dashed grey;
   border-radius: 5px;
   display: flex;
@@ -277,8 +278,6 @@ export default {
 .page__managecontainer {
   display: flex;
   flex-direction: column;
-  /* min-width: 300px;
-  max-width: 300px; */
   padding: 3px;
   margin-bottom: 20px;
 }

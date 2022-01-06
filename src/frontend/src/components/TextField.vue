@@ -6,8 +6,9 @@
       textfield_right: align === 'right',
       textfield_center: align === 'center',
     }"
-    >{{ value }}</span
   >
+    {{ value }}
+  </span>
 </template>
 
 <script>
